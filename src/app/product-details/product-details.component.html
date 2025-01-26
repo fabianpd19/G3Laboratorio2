@@ -1,0 +1,8 @@
+<div *ngIf="product" class="product-details">
+    <img [src]="product?.imageUrl" alt="{{ product?.name }}">
+    <h2>{{ product?.name }}</h2>
+    <p>{{ product?.description }}</p>
+    <p>Precio: {{ product?.price | currency }}</p>
+    <p *ngIf="product?.onSale" class="sale">¡Producto en oferta!</p>
+</div>
+<p *ngIf="!product">Seleccione un producto para ver sus detalles.</p>

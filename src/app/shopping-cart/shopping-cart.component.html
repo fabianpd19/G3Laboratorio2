@@ -1,0 +1,11 @@
+<div class="shopping-cart">
+    <p *ngIf="cartItems.length === 0">El carrito está vacío.</p>
+    <ul *ngIf="cartItems.length > 0">
+        <li *ngFor="let item of cartItems">
+            {{ item.name }} - {{ item.price | currency }}
+        </li>
+    </ul>
+    <p *ngIf="cartItems.length > 0">
+        Total: {{ total | currency }}
+    </p>
+</div>

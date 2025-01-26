@@ -1,0 +1,12 @@
+<div class="product-list">
+    <div *ngFor="let product of products" class="product-card" [ngClass]="{'on-sale': product.onSale}">
+        <img [src]="product.imageUrl" alt="{{ product.name }}">
+        <h3>{{ product.name }}</h3>
+        <p>{{ product.description }}</p>
+        <p [ngStyle]="{'color': product.onSale ? 'green' : 'black'}">
+            Precio: {{ product.price | currency }}
+        </p>
+        <button (click)="viewDetails(product)">Ver Detalles</button>
+        <button (click)="addProductToCart(product)">Agregar al Carrito</button>
+    </div>
+</div>
