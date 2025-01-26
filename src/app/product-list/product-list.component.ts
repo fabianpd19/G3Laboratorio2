@@ -19,7 +19,7 @@ export class ProductListComponent {
       name: 'Vestido Rojo',
       description: 'Vestido de seda con detalles florales.',
       price: 1500,
-      imageUrl: 'https://via.placeholder.com/150',
+      imageUrl: '/producto1.jpg',
       onSale: true
     },
     {
