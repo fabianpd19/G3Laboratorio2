@@ -12,6 +12,9 @@ import { Product } from './product';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  title(title: any) {
+    throw new Error('Method not implemented.');
+  }
   selectedProduct: Product | null = null;
   cart: Product[] = [];
 
