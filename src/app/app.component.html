@@ -1,6 +1,6 @@
 <div class="app-container">
   <app-product-list (selectProduct)="onSelectProduct($event)" (addToCart)="onAddToCart($event)"></app-product-list>
-  <div class="sidebar">
+  <div class="sidebar" [ngClass]="{'floating': true, 'mobile-floating': isMobileView}">
     <app-product-details [product]="selectedProduct"></app-product-details>
     <app-shopping-cart [cartItems]="cart"></app-shopping-cart>
   </div>
