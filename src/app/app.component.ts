@@ -19,7 +19,7 @@ export class AppComponent {
 
   @HostListener('window:resize', ['$event'])
   onResize() {
-    this.isMobileView = window.innerWidth <= 1000;
+    this.isMobileView = window.innerWidth <= 768;
   }
 
   onSelectProduct(product: Product) {
