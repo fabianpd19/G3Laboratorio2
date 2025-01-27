@@ -27,7 +27,7 @@ export class ProductListComponent {
       name: 'Camisa Blanca',
       description: 'Camisa clásica de algodón.',
       price: 800,
-      imageUrl: 'https://via.placeholder.com/150',
+      imageUrl: '/producto2.jpg',
       onSale: false
     },
     {
@@ -35,7 +35,7 @@ export class ProductListComponent {
       name: 'Pantalón Negro',
       description: 'Pantalón formal para ocasiones especiales.',
       price: 1200,
-      imageUrl: 'https://via.placeholder.com/150',
+      imageUrl: '/producto3.jpg',
       onSale: true
     }
   ];
