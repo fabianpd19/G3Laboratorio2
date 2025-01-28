@@ -2,12 +2,13 @@
     <h2>Carrito de Compras</h2>
     <p *ngIf="cartItems.length === 0">El carrito está vacío</p>
     <ul *ngIf="cartItems.length > 0">
-        <li *ngFor="let item of cartItems">
+        <li *ngFor="let item of cartItems; let i = index">
             <span>{{ item.name }}</span>
             <span>{{ item.price | currency }}</span>
+            <button (click)="removeItem(i)">Eliminar</button>
         </li>
     </ul>
     <p *ngIf="cartItems.length > 0" class="total">
-        Total: {{ total | currency }}
+        Total: {{ total | currency }} ({{ cartItems.length }} productos)
     </p>
 </div>

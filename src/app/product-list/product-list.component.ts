@@ -1,11 +1,12 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Product } from '../product';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-product-list',
   standalone: true, // Esto declara el componente como standalone
-  imports: [CommonModule], // Importa módulos comunes que necesites (por ejemplo, *ngFor, *ngIf)
+  imports: [CommonModule, FormsModule], // Importa módulos comunes que necesites (por ejemplo, *ngFor, *ngIf)
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css']
 })
@@ -47,4 +48,11 @@ export class ProductListComponent {
   addProductToCart(product: Product) {
     this.addToCart.emit(product);
   }
+
+  searchTerm: string = '';
+filteredProducts(): Product[] {
+  return this.products.filter(product => 
+    product.name.toLowerCase().includes(this.searchTerm.toLowerCase()));
+}
+
 }

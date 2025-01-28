@@ -1,6 +1,10 @@
+<div class="search-container">
+    <input type="text" placeholder="Buscar producto..." [(ngModel)]="searchTerm" class="search-input" />
+</div>
+
 <div class="product-list">
-    <div *ngFor="let product of products" class="product-card" [class.on-sale]="product.onSale">
-        <img [src]="product.imageUrl" [alt]="product.name">
+    <div *ngFor="let product of filteredProducts()" class="product-card" [class.on-sale]="product.onSale">
+        <img [src]="product.imageUrl" [alt]="product.name" />
         <h3>{{ product.name }}</h3>
         <p>{{ product.description }}</p>
         <p class="price">{{ product.price | currency }}</p>
